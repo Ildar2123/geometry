@@ -1,0 +1,6 @@
+*.o
+main
+input*
+a.out
+struct*
+test*
