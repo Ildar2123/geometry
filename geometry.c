@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define M_PI 3.14
 #define TRIANGLE 1
 #define CIRCLE 2
 
@@ -26,11 +27,7 @@ int Parser(Figure *new, char *A)
   {
     new->type = CIRCLE;
   }
-  else
-  {
-    printf("Unknown type\n");
-    return 1;
-  }
+  
   char *end;
   end = A;
   i = -1;
