@@ -1,3 +1,4 @@
+
 FLAGS := -std=c99
 
 all: main.o geometry.o
