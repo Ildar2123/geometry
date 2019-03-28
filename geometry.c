@@ -51,14 +51,14 @@ int Parser(Figure *new, char *A)
   return 0;
 }
 
-void PCI(double *S, double *P, Figure *new)
+double PCI(double *S, double *P, Figure *new)
 {
   double r = new->coordinates[2];
   *S = M_PI * (r * r);
   *P = 2 * M_PI * r;
 }
 
-void PTI(double *S, double *P, Figure *new)
+double PTI(double *S, double *P, Figure *new)
 {
   double a = sqrt(pow((new->coordinates[2] - new->coordinates[0]), 2.0) + pow((new->coordinates[3] - new->coordinates[1]), 2.0));
   double b = sqrt(pow((new->coordinates[4] - new->coordinates[2]), 2.0) + pow((new->coordinates[5] - new->coordinates[3]), 2.0));
