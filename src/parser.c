@@ -92,7 +92,7 @@ int Punctuation_for_circle(char* arr, int i)
         }
     } else {
         printf("lacks or extra ','\n");
-        return 1;
+        return 0;
     }
     return 0;
 }
