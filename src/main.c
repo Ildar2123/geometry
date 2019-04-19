@@ -48,7 +48,7 @@ int main()
       if (new == NULL)
       {
         printf("Alloceted error\n");
-        return 1;
+        return 0;
       }
     }
   }

@@ -23,7 +23,7 @@ int Parser(Figure* new, char* A)
         return 0;
     } else {
         printf("Unknown type\n");
-        return 1;
+        return 0;
     }
 }
 
@@ -49,7 +49,7 @@ int Extra_sumbol(char* arr, int i)
     for (int j = i; arr[j] != '\0'; j++) {
         if (arr[j] > 'a' && arr[j] < 'z') {
             printf("Extra sumbol\n");
-            return 1;
+            return 0;
         }
     }
     return 0;
@@ -120,7 +120,7 @@ int Punctuation(char* arr)
     }
     if (done == 0) {
         printf("Punctuation error (lacks '(')\n");
-        return 1;
+        return 0;
     }
     return 0;
 }
@@ -129,7 +129,7 @@ int First_Character(char* arr)
 {
     if (arr[0] > 'a' && arr[0] < 'z') {
         if (Punctuation(arr)) {
-            return 1;
+            return 0;
         }
     } else {
         printf("Error in the first character.\n");
