@@ -1,3 +1,4 @@
+.PHONY : clean
 FLAGS := -std=c99
 SRC_DIR := ./src
 BIN_DIR := ./bin
