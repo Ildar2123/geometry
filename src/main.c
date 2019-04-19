@@ -12,7 +12,7 @@ int main()
   if (myfile == NULL)
   {
     printf("No file\n");
-    return 1;
+     
   }
   printf("You input:\n");
   int capacity = 100;
@@ -23,7 +23,6 @@ int main()
   if (new == NULL)
   {
     printf("Alloceted error\n");
-    return 1;
   }
   while ((arr[i++] = fgetc(myfile)) != EOF)
   {
@@ -48,7 +47,6 @@ int main()
       if (new == NULL)
       {
         printf("Alloceted error\n");
-        return 0;
       }
     }
   }

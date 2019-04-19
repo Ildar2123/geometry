@@ -67,11 +67,11 @@ int Punctuation_for_triangle(char* arr, int i)
     if (k == 3) {
         if (!(arr[j - 2] == ')' && arr[j - 1] == ')')) {
             printf("lacks ')'\n");
-            return 1;
+            return 0;
         }
     } else {
         printf("lacks or extra ','\n");
-        return 1;
+        return 0;
     }
     return 0;
 }
@@ -88,11 +88,11 @@ int Punctuation_for_circle(char* arr, int i)
     if (k == 1) {
         if (!(arr[j - 1] == ')')) {
             printf("lacks ')'\n");
-            return 1;
+           
         }
     } else {
         printf("lacks or extra ','\n");
-        return 0;
+       
     }
     return 0;
 }
@@ -106,33 +106,33 @@ int Punctuation(char* arr)
                 done = 1;
                 if (Extra_sumbol(arr, (i + 1))
                     || Punctuation_for_triangle(arr, (i + 1))) {
-                    return 1;
+                    
                 }
-                return 0;
+                
             } else {
                 done = 1;
                 if (Extra_sumbol(arr, i) || Punctuation_for_circle(arr, i)) {
-                    return 1;
+                    
                 }
-                return 0;
+                
             }
         }
     }
     if (done == 0) {
         printf("Punctuation error (lacks '(')\n");
-        return 0;
+       
     }
-    return 0;
+   
 }
 
 int First_Character(char* arr)
 {
     if (arr[0] > 'a' && arr[0] < 'z') {
         if (Punctuation(arr)) {
-            return 0;
+            
         }
     } else {
         printf("Error in the first character.\n");
     }
-    return 0;
+    
 }
